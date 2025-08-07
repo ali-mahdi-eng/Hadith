@@ -14,7 +14,7 @@
 <br>
 <br>
 
-# # ToDo:
+## ToDo:
 - [x] Change Some Directories (add "style" & "script" to assets directory).
 - [ ] Upload Website to host ([netlify.com](https://www.netlify.com/))
 - [ ] Remake tutorial animation (with animation is more better).
@@ -23,7 +23,7 @@
 <br>
 <br>
 
-## # Done [0.x.0]:
+### Done [0.x.0]:
 - [x] Add Save Favourites Hadith Feature (the same algorithm of bookmark feature).
 - [x] fix issues of getting index saved of last hadith in localStorage
 - [x] In "hadith-ahl-albyt" page, save lastest hadith has been read.
@@ -33,7 +33,7 @@
 <br>
 <br>
 
-## # Bugs Fixed [0.0.x]:
+### Bugs Fixed [0.0.x]:
 - [x] Fix And Improve Storage (improve structure or design of saved data in localStorage, like previous hadith index..etc).
 - [x] Add light (white) mode (use can't change themes yet, in next versions he will can).
 - [x] Improve Accessibility (Add "area-lable" attribute for buttons).
