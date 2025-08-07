@@ -2,7 +2,7 @@
     "name": "Hadith",
     "short_name": "Hadith",
     "start_url": "./index.html",
-    "display": "standalone",
+    "display": "fullscreen",
     "icons": [
         {
             "src": "./assets/icons/app_icon/android-chrome-192x192.png",
