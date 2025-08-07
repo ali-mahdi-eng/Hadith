@@ -5,3 +5,4 @@ allSections.forEach((section)=>{
         window.location.href = section.getAttribute("data-url")
     });
 });
+
