@@ -1,27 +1,27 @@
-
-> Version:
->> *Previous [1.8.3]*
->>
->> ***Current [1.8.4]***
+# Hadith
 
 
-### ---
-### V1.8.4
-### ---
+### V1.8.5
+*previous version [1.8.4]*
+
+---
 
 <br>
 <br>
 
-# # ToDo:
-- [x] Change Some Directories (add "style" & "script" to assets directory).
-- [ ] Upload Website to host ([netlify.com](https://www.netlify.com/))
+## 📝 ToDo:
+- [x] change icons color (darkblue => darkgreen).
+- [ ] Link of page (url) can be shared to anyone to share the same hadith (content), but it must be don't saved in storage (don't save if user come from external link).
+- [ ] Fix not updated GUI problem, when add or remove Hadith to/from favourite GUI not updated directly (icon not directly reacting);
+- [x] Upload Project on GitHub on: ([Live Page](https://ali-mahdi-eng.github.io/Hadith/))
+- [x] Upload Website to host ([netlify.com](https://www.netlify.com/))
 - [ ] Remake tutorial animation (with animation is more better).
 - [ ] check if first visit show tutorial.
 
 <br>
 <br>
 
-## # Done [0.x.0]:
+## ✅ Done [0.x.0]:
 - [x] Add Save Favourites Hadith Feature (the same algorithm of bookmark feature).
 - [x] fix issues of getting index saved of last hadith in localStorage
 - [x] In "hadith-ahl-albyt" page, save lastest hadith has been read.
@@ -31,7 +31,8 @@
 <br>
 <br>
 
-## # Bugs Fixed [0.0.x]:
+## 🐞 Bugs Fixed [0.0.x]:
+- [x] Change Some Directories (add "style" & "script" to assets directory).
 - [x] Fix And Improve Storage (improve structure or design of saved data in localStorage, like previous hadith index..etc).
 - [x] Add light (white) mode (use can't change themes yet, in next versions he will can).
 - [x] Improve Accessibility (Add "area-lable" attribute for buttons).
@@ -43,13 +44,13 @@
 <br>
 <br>
 
-## Neglected:
+## 👎 Neglected:
 - (may not neglected) animation tutorial (for moving between content).
 
 <br>
 <br>
 
-## Features:
+## 🔮 Features:
 - [ ] Setting (Customize font: size, color, family, gaps, line hight).
 - [ ] Move page "About App" into "Settings".
 - [ ] Light/Dark Mode.
