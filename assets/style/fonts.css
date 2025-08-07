@@ -1,0 +1,30 @@
+/*
+Important:
+=>  Don't Delete This File.
+
+=>  This CSS File Doesn't Need To By Added To HTML Files,
+    Because It's Export Fonts For Another CSS File Directly.
+*/
+
+
+
+@font-face {
+    font-family: Amiri_700;
+    src: url("../fonts/Amiri_700.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: Amiri;
+    src: url("../fonts/Amiri.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Cairo-300";
+    src: url("../fonts/Cairo-300");
+    font-display: swap;
+}
+@font-face {
+    font-family: "El_Messiri-regular";
+    src: url("../fonts/El_Messiri-regular.ttf");
+    font-display: swap;
+}
