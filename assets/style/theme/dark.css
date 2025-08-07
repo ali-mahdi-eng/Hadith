@@ -1,1 +1,83 @@
 
+:root {
+    color-scheme: #26272e;
+}
+
+/*
+=======================
+    => index.html
+=======================
+*/
+body {
+    background: #171717;
+    color: #efefef;
+}
+
+#main-hadith {
+    border: 1px solid #efefef;
+}
+
+#main-hadith #source, #main-hadith #text{
+    background: none;
+}
+
+.section {
+    border: 1.5px solid #dfdfdf;
+    background: transparent;
+}
+
+
+/*
+=======================
+    => subject.css
+=======================
+*/
+
+#back-btn:active {
+    background: #26272e;
+}
+svg path {
+    stroke: #eee;
+}
+
+ul .subject {
+    border: 1px solid #ddd;
+}
+
+/*
+=======================
+    => content.css
+=======================
+*/
+
+#add-to-favourite-btn:active,
+#copy-btn:active,
+#back-btn:active {
+    background: #26272e;
+}
+
+#add-to-favourite-btn:active svg,
+.favourited {
+    fill: #eee;
+}
+svg path {
+    stroke: #eee;
+}
+
+#alert-message {
+    border: 1px solid #dfdfdf;
+    background: #171717;
+}
+
+#sayer {
+    color: #dfdfdf;
+}
+
+#text {
+    background: #32354a;
+    color: #dfdfdf;
+}
+
+#source {
+    background: #222431;
+}
