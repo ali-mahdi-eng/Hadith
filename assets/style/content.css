@@ -242,7 +242,8 @@ svg path {
     margin-bottom: 10px;
     border-radius: 5px;
     /* background: #32354a; */
-    background: teal;
+    /* background: teal; */
+    background: #007a7a;
     color: #dfdfdf;
     font-size: 20px;
     line-height: 2.5rem;
