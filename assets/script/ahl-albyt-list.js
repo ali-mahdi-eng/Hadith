@@ -3,6 +3,8 @@ let sectionList = document.getElementById('section-list');
 
 
 
+
+
 function getJsonData() {
     let url = "./data/api/shia/ahl-albyt-list.json";
     fetch(url)

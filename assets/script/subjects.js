@@ -8,6 +8,7 @@ function getSectionNameFromURL() {
     let params = new URLSearchParams(window.location.search);
     let currentSection = params.get("section");
     document.querySelector("title").textContent = currentSection;
+    document.querySelector(".section-title").textContent = currentSection;
     return currentSection;
 }
 

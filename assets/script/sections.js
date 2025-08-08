@@ -3,6 +3,9 @@ let sectionList = document.getElementById('section-list');
 
 
 
+
+
+
 async function getJsonData() {
     let url = "./data/hadith.json";
     try {
