@@ -18,41 +18,26 @@ if ('serviceWorker' in navigator) {
 
 // Notify the user about a new update
 function showUpdateNotification(worker) {
-  const notification = document.createElement('div');
-  notification.style.cssText = `
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #222;
-    color: white;
-    padding: 12px;
-    text-align: center;
-    font-size: 16px;
-    z-index: 10000;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-  `;
-  notification.innerHTML = `
-    A new update is available 
-    <button style="margin-left:10px; padding:5px 10px; background:#fff; border:none; cursor:pointer;">
-      Update Now
-    </button>
-  `;
+    const notification = document.createElement('div');
+        notification.className = "notification";
+        notification.classList.add("notification-in");
+        notification.textContent = "هناك تحديث جديد";
+    const updateNowBtn = document.createElement('button');
+          updateNowBtn.className = "update-now-btn";
+          updateNowBtn.textContent = "حدث الآن";
 
-  const btn = notification.querySelector('button');
-  btn.addEventListener('click', () => {
+    updateNowBtn.addEventListener('click', () => {
     worker.postMessage({ type: 'SKIP_WAITING' });
-    window.location.reload();
-  });
-
-  document.body.appendChild(notification);
-
-  // Auto-hide the notification after 20 seconds
-  setTimeout(() => {
-    notification.style.transform = 'translateY(100%)';
+        window.location.reload();
+    });
+    // Display Notification
+    document.querySelector("#main").appendChild(notification);
+    // Auto-hide the notification after 15 seconds
     setTimeout(() => {
-      notification.remove();
-    }, 300); // Wait for transition to finish
-  }, 10000); // 10 seconds
+        notification.classList.remove("notification-in");
+        notification.classList.add("notification-out");
+        setTimeout(() => {
+            notification.remove();
+        }, 500); // Wait for transition to finish
+    }, 15000); // 15 seconds
 }
