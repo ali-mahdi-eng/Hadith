@@ -18,7 +18,6 @@ body {
     position: relative;
     height: 100vh;
     width: 100vw;
-    /* background: #171717; */
     background: teal;
     color: #efefef;
     user-select: none;
@@ -30,7 +29,8 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 60px;
+    /* height: 60px; */
+    height: 70px;
     width: 100%;
     background: transparent;
 }
@@ -40,21 +40,26 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    height: 40px;
-    width: 40px;
+    /* height: 40px;
+    width: 40px; */
+    height: 45px;
+    width: 45px;
     border: none;
     border-radius: 0px;
     background: transparent;
     transition: .1s linear;
 }
 #copy-btn {
-    left: 10px;
+    /* left: 10px; */
+    left: 15px;
 }
 #add-to-favourite-btn {
-    left: 65px;
+    /* left: 65px; */
+    left: 70px;
 }
 #back-btn {
-    right: 10px;
+    /* right: 10px; */
+    right: 15px;
     overflow: hidden;
 }
 
@@ -72,22 +77,31 @@ body {
 
 #copy-btn:active, #add-to-favourite-btn:active, #back-btn:active {
     border-radius: 10px;
-    /* background: #26272e; */
     background: #04939386;
     transition: .1s linear;
 }
 svg {
-    height: 28px;
-    width: 28px;
+    /* height: 28px;
+    width: 28px; */
+    height: 30px;
+    width: 30px;
     transition: .1s linear;
 }
+
+#copy-btn svg {
+    height: 28px;
+    width: 28px;
+}
+
 #copy-btn:active svg {
     height: 24px;
     width: 24px;
 }
 #add-to-favourite-btn:active svg {
-    height: 32px;
-    width: 32px;
+    /* height: 32px;
+    width: 32px; */
+    height: 35px;
+    width: 35px;
 }
 #add-to-favourite-btn:active svg,
 .favourited {
@@ -127,7 +141,6 @@ svg path {
     padding: 5px 15px;
     border: 1px solid #dfdfdf;
     border-radius: 5px;
-    /* background: #171717; */
     background: #04939386;
     font-family: El_Messiri-regular;
     transition: .3s linear;
@@ -152,8 +165,6 @@ svg path {
     height: 70%;
     width: 30%;
     border-radius: 5px;
-    /* background: #32354a; */
-    /* box-shadow: 0 0 20px #32354a; */
     font-size: 50px;
     font-weight: 200;
     color: #eee;
@@ -241,8 +252,6 @@ svg path {
     padding: 20px 15px;
     margin-bottom: 10px;
     border-radius: 5px;
-    /* background: #32354a; */
-    /* background: teal; */
     background: #007a7a;
     color: #dfdfdf;
     font-size: 20px;
@@ -258,7 +267,6 @@ svg path {
     max-width: 70%;
     padding: 5px 10px;
     border-radius: 10px;
-    /* background: #222431; */
     background: #04939386;
     opacity: .7;
     font-family: El_Messiri-regular;
