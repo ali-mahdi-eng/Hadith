@@ -93,6 +93,57 @@ main {
     width: 100%;
 }
 
+
+
+/*========= Notification =========*/
+.notification {
+    z-index: 10000;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    border-radius: 18px;
+    background: #222;
+    color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-family: El_Messiri-regular;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}
+.notification-in {
+    animation: 0.5s notification-in ease;
+}
+.notification-out {
+    animation: 0.5s notification-in ease;
+}
+@keyframes notification-in {
+    0% {top: -200px;}
+    100% {top: 15px;}
+}
+@keyframes notification-out {
+    0% {top: 15px;}
+    100% {top: -200px;}
+}
+
+.update-now-btn {
+    position: relative;
+    right: 10px;
+    order: -1;
+    padding: 10px 20px;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: El_Messiri-regular;
+}
+/*========= Notification =========*/
+
+
+
 ul {
     position: fixed;
     display: flex;
