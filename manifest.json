@@ -1,6 +1,6 @@
 {
-    "name": "Hadith",
-    "short_name": "Hadith",
+    "name": "حديث",
+    "short_name": "حديث",
     "start_url": "./index.html",
     "display": "standalone",
     "icons": [
