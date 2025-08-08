@@ -1,7 +1,7 @@
 # Hadith
 
 
-### V1.8.5
+### V1.8.6
 *previous version [1.8.5]*
 
 ---
@@ -10,7 +10,9 @@
 <br>
 
 ## 📝 ToDo:
-- [ ] improve display and u UI on mobile app(PWA),
+- [x] enhance `update Now` button style.
+- [x] small UI/UX improvement (display page title in header, enhance header item position).
+- [ ] improve display and UI on mobile app(PWA),
 - [ ] Link of page (url) can be shared to anyone to share the same hadith (content), but it must be don't saved in storage (don't save if user come from external link).
 - [ ] Fix not updated GUI problem, when add or remove Hadith to/from favourite GUI not updated directly (icon not directly reacting);
 - [ ] Remake tutorial animation (with animation is more better).
@@ -30,7 +32,7 @@
 <br>
 
 ## 🐞 Bugs Fixed [0.0.x]:
-- [x] change icons color (darkblue => darkgreen).
+- [x] change icons color (darkblue => teal).
 - [x] Upload Project on GitHub on: [Live Page](https://ali-mahdi-eng.github.io/Hadith/) , [Project Files](https://github.com/ali-mahdi-eng/Hadith)
 - [x] Upload Website to host ([netlify.com](https://www.netlify.com/))
 - [x] Change Some Directories (add "style" & "script" to assets directory).
