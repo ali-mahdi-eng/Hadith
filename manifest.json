@@ -2,7 +2,7 @@
     "name": "Hadith",
     "short_name": "Hadith",
     "start_url": "./index.html",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
         {
             "src": "./assets/icons/app_icon/android-chrome-192x192.png",
@@ -21,6 +21,6 @@
             "type": "image/png"
         }
     ],
-    "theme_color" : "#008080",
+    "theme_color" : "#282828",
     "background_color": "#008080"
 }
