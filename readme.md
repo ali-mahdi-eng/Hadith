@@ -2,7 +2,7 @@
 
 
 ### V1.8.5
-*previous version [1.8.4]*
+*previous version [1.8.5]*
 
 ---
 
@@ -10,11 +10,9 @@
 <br>
 
 ## 📝 ToDo:
-- [x] change icons color (darkblue => darkgreen).
+- [ ] improve display and u UI on mobile app(PWA),
 - [ ] Link of page (url) can be shared to anyone to share the same hadith (content), but it must be don't saved in storage (don't save if user come from external link).
 - [ ] Fix not updated GUI problem, when add or remove Hadith to/from favourite GUI not updated directly (icon not directly reacting);
-- [x] Upload Project on GitHub on: ([Live Page](https://ali-mahdi-eng.github.io/Hadith/))
-- [x] Upload Website to host ([netlify.com](https://www.netlify.com/))
 - [ ] Remake tutorial animation (with animation is more better).
 - [ ] check if first visit show tutorial.
 
@@ -32,6 +30,9 @@
 <br>
 
 ## 🐞 Bugs Fixed [0.0.x]:
+- [x] change icons color (darkblue => darkgreen).
+- [x] Upload Project on GitHub on: [Live Page](https://ali-mahdi-eng.github.io/Hadith/) , [Project Files](https://github.com/ali-mahdi-eng/Hadith)
+- [x] Upload Website to host ([netlify.com](https://www.netlify.com/))
 - [x] Change Some Directories (add "style" & "script" to assets directory).
 - [x] Fix And Improve Storage (improve structure or design of saved data in localStorage, like previous hadith index..etc).
 - [x] Add light (white) mode (use can't change themes yet, in next versions he will can).
