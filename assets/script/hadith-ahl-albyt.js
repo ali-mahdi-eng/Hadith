@@ -10,6 +10,13 @@ let copyBtn = document.getElementById('copy-btn');
 let alertMessage = document.getElementById('alert-message');
 
 
+// Don't Delete Tutorial, will added as first element in data array.
+const tutorial = {
+    "sayer": "التنقل بين النصوص",
+    "text": "للأنتقال الى النص التالي إضغط الحافة اليمنى للشاشة، للرجوع الى النص السابق إضغط الحافة اليسرى للشاشة.",
+    "source": "التعليمات"
+}
+
 
 
 const storage = {
@@ -62,6 +69,8 @@ async function getJsonData() {
         let hadithList = Object.values(data);
         // Hide/Show [sayer & source] If There is no data found.
         if (hadithList.length > 0) {
+            // Add tutorial data to Array
+            hadithList.unshift(tutorial.text);
             sayer.style.visibility = "hidden";
             source.style.visibility = "visible";
             copyBtn.style.visibility = "visible";

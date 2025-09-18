@@ -12,10 +12,19 @@ var alertMessage = document.getElementById('alert-message');
 
 
 
+// Don't Delete Tutorial, will added as first element in data array.
+const tutorial = {
+    "sayer": "التنقل بين النصوص",
+    "text": "للأنتقال الى النص التالي إضغط الحافة اليمنى للشاشة، للرجوع الى النص السابق إضغط الحافة اليسرى للشاشة.",
+    "source": "التعليمات"
+}
+
+
+
 const storage = {
     section: getSection_or_SubjectFromURL("get_section"),
     subject: getSection_or_SubjectFromURL("get_subject"),
-    previousIndex: JSON.parse(localStorage.getItem("storage"))?.[getSection_or_SubjectFromURL("get_section")]?.[getSection_or_SubjectFromURL("get_subject")] || 0,
+    currentIndex: JSON.parse(localStorage.getItem("storage"))?.[getSection_or_SubjectFromURL("get_section")]?.[getSection_or_SubjectFromURL("get_subject")] || 0,
     dataSaved: JSON.parse(localStorage.getItem("storage")) || null,
 }
 
@@ -39,7 +48,7 @@ function getSection_or_SubjectFromURL(data_required) {
 function updateStorage() {
     let temp = (storage.dataSaved) ? (storage.dataSaved) : ({});
     temp[storage.section] = temp[storage.section] || {};
-    temp[storage.section][storage.subject] = storage.previousIndex;
+    temp[storage.section][storage.subject] = storage.currentIndex;
     localStorage.setItem("storage", JSON.stringify(temp));
     /*
     Preview:
@@ -70,57 +79,57 @@ async function getJsonDataFromAPI() {
         const data = await response.json();
         handleData(data);
     }
-    catch (err) {
+    catch(err) {
         console.error("ERR:", err.static, err.message)
     }
     
     
     function handleData(data) {
         var hadithList = data[storage.section][storage.subject];
-        console.log(`>> Home/${storage.section}/${storage.subject}/${storage.previousIndex}`);
-
         // Hide/Show [sayer & source] If There is no data found.
         if (hadithList.length > 0) {
+            // Add tutorial to data array
+            hadithList.unshift(tutorial);
             sayer.style.visibility = "visible";
             source.style.visibility = "visible";
+            copyBtn.style.visibility = "visible";
+            addToFavouritesBtn.style.visibility = "visible";
         }else {
             text.textContent = "Data Not Found!";
             sayer.style.visibility = "hidden";
             source.style.visibility = "hidden";
             copyBtn.style.visibility = "hidden";
+            addToFavouritesBtn.style.visibility = "hidden";
         }
         
-        function NavigationBetweenHadith(navigateDirection = 1) {
-            if (navigateDirection === -1 && storage.previousIndex === 0) return;
-            if (navigateDirection ===  1 && storage.previousIndex === hadithList.length -1) return;
-            if (navigateDirection !== 0 ) storage.previousIndex += (1 * navigateDirection);
-            
-            if (storage.previousIndex === 0) { priviousHadithBtn.style.visibility = "hidden";} else { priviousHadithBtn.style.visibility = "visible"; }
-            if (storage.previousIndex === hadithList.length -1) { nextHadithBtn.style.visibility = "hidden";} else{ nextHadithBtn.style.visibility = "visible";}
-            
-            if (navigateDirection == null) return;
-            if (hadithList.length == 0) return;
-            
-            sayer.textContent = hadithList[storage.previousIndex].sayer;
-            text.textContent = hadithList[storage.previousIndex].text;
-            source.textContent = hadithList[storage.previousIndex].source;
-            
-            IncreaseSourceElementWidth(hadithList[storage.previousIndex]);
-            updateStorage();
-            isFavourited(storage.previousIndex);
-        }
-        // current Hadith
+        // Display current hadith
         NavigationBetweenHadith(0);
         // Next Hadith
         nextHadithBtn.addEventListener("click",()=>{ NavigationBetweenHadith(1); });
         // Privious Hadith
         priviousHadithBtn.addEventListener("click",()=>{ NavigationBetweenHadith(-1); });
         // Copy To Clipboard
-        copyBtn.addEventListener("click", ()=>{ copyToClipboard(hadithList[storage.previousIndex]) });
+        copyBtn.addEventListener("click", ()=>{ copyToClipboard(hadithList[storage.currentIndex]) });
         // Add To Favourites
-        addToFavouritesBtn.addEventListener("click", ()=>{ addToFavourites(hadithList[storage.previousIndex]) });
-    
-        // document.querySelector("title").textContent = storage.subject;
+        addToFavouritesBtn.addEventListener("click", ()=>{ addToFavourites(hadithList[storage.currentIndex]) });
+        // Handle Navigation Buttons
+        function NavigationBetweenHadith(navigateDirection = 1) {
+            if (navigateDirection === -1 && storage.currentIndex === 0) return;
+            if (navigateDirection ===  1 && storage.currentIndex === hadithList.length -1) return;
+            if (navigateDirection !== 0 ) storage.currentIndex += (1 * navigateDirection); // (1 * +1) OR (1 * -1)
+            
+            if (storage.currentIndex === 0) { priviousHadithBtn.style.visibility = "hidden";} else { priviousHadithBtn.style.visibility = "visible"; }
+            if (storage.currentIndex === hadithList.length -1) { nextHadithBtn.style.visibility = "hidden";} else{ nextHadithBtn.style.visibility = "visible";}
+            
+            if (hadithList.length == 0) return;
+            sayer.textContent = hadithList[storage.currentIndex].sayer;
+            text.textContent = hadithList[storage.currentIndex].text;
+            source.textContent = hadithList[storage.currentIndex].source;
+            IncreaseSourceElementWidth(hadithList[storage.currentIndex]);
+            
+            isFavourited(storage.currentIndex);
+            updateStorage();
+        }
     }
 }
 getJsonDataFromAPI();
@@ -142,9 +151,9 @@ function addToFavourites(currentHadith) {
         favouritesStorage = JSON.parse(localStorage.getItem("favourites_storage"));
     }
     
-    if (isFavourited(storage.previousIndex)) {
+    if (isFavourited(storage.currentIndex)) {
         // Remove From favourites
-        delete favouritesStorage[`${storage.section}-${storage.subject}-${storage.previousIndex}`];
+        delete favouritesStorage[`${storage.section}-${storage.subject}-${storage.currentIndex}`];
         localStorage.setItem("favourites_storage", JSON.stringify(favouritesStorage));
         
         alertMessage.textContent = "تم إزالة الحديث";
@@ -153,8 +162,8 @@ function addToFavourites(currentHadith) {
     }
     else {
         // Add To favourites
-        favouritesStorage[`${storage.section}-${storage.subject}-${storage.previousIndex}`] = {
-            index: storage.previousIndex,
+        favouritesStorage[`${storage.section}-${storage.subject}-${storage.currentIndex}`] = {
+            index: storage.currentIndex,
             sayer: currentHadith.sayer,
             text: currentHadith.text,
             source: currentHadith.source
@@ -165,12 +174,12 @@ function addToFavourites(currentHadith) {
         alertMessage.style.visibility = "visible";
         setTimeout(()=>{ alertMessage.style.visibility = "hidden"; }, 1000);
     }
-    isFavourited(storage.previousIndex);
+    isFavourited(storage.currentIndex);
 }
 
 
 function isFavourited(currentIndex) {
-    if (!currentIndex || (JSON.parse(localStorage.getItem("favourites_storage")) == undefined)) return;
+    if (((currentIndex !== 0) && (!currentIndex)) || (JSON.parse(localStorage.getItem("favourites_storage")) == undefined)) return;
     document.querySelector("#add-to-favourite-btn svg").classList.remove("favourited");
     let isAddedToFavourite = (JSON.parse(localStorage.getItem("favourites_storage"))[`${storage.section}-${storage.subject}-${currentIndex}`]) ? true : false;
     if (isAddedToFavourite) {

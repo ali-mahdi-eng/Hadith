@@ -1,3 +1,5 @@
+// Comment this file when change or edit any other files.
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js').then((registration) => {
     // Is there a new version?

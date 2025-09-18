@@ -1,4 +1,6 @@
 let allSections = document.querySelectorAll(".section");
+let openSettingsBtn = document.querySelector(".open-settings-btn");
+let closeSettingsBtn = document.querySelector(".close-settings-btn");
 
 allSections.forEach((section)=>{
     section.addEventListener("click", ()=>{
@@ -6,3 +8,12 @@ allSections.forEach((section)=>{
     });
 });
 
+
+
+openSettingsBtn?.addEventListener("click", ()=>{
+    document.querySelector(".settings-container").style.display = "flex";
+});
+
+closeSettingsBtn?.addEventListener("click", ()=>{
+    document.querySelector(".settings-container").style.display = "none";
+});
