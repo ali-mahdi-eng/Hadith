@@ -18,7 +18,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: teal;
+    background: #008080; /* teal */
     color: #efefef;
     user-select: none;
 }
@@ -39,9 +39,12 @@ body {
 #copy-btn, #back-btn, #add-to-favourite-btn {
     position: absolute;
     top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     /* height: 40px;
     width: 40px; */
+    height: 45px;
+    width: 45px;
     height: 45px;
     width: 45px;
     border: none;
@@ -50,16 +53,21 @@ body {
     transition: .1s linear;
 }
 #copy-btn {
+    visibility: hidden;
     /* left: 10px; */
     left: 15px;
+    left: 20px;
 }
 #add-to-favourite-btn {
+    visibility: hidden;
     /* left: 65px; */
     left: 70px;
+    left: 80px;
 }
 #back-btn {
     /* right: 10px; */
     right: 15px;
+    right: 25px;
     overflow: hidden;
 }
 
@@ -85,12 +93,16 @@ svg {
     width: 28px; */
     height: 30px;
     width: 30px;
+    height: 38px;
+    width: 38px;
     transition: .1s linear;
 }
 
 #copy-btn svg {
     height: 28px;
     width: 28px;
+    height: 35px;
+    width: 35px;
 }
 
 #copy-btn:active svg {
@@ -125,6 +137,7 @@ svg path {
     display: block;
     height: 80px;
 }
+
 
 
 /*========= Notification =========*/
@@ -290,8 +303,10 @@ svg path {
 #sayer {
     padding: 10px 20px;
     margin: 30px 0;
+    margin: 50px 0 30px 0;
     color: #dfdfdf;
     font-size: 22px;
+    font-size: 24px;
     font-family: El_Messiri-regular;
 }
 
@@ -306,7 +321,7 @@ svg path {
     color: #dfdfdf;
     font-size: 20px;
     line-height: 2.5rem;
-    font-family: Amiri, Amiri_700, El_Messiri-regular, Arial;
+    font-family: Amiri, Arial;
 }
 
 #source {

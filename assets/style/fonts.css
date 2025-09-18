@@ -7,24 +7,18 @@ Important:
 */
 
 
-
-@font-face {
-    font-family: Amiri_700;
-    src: url("../fonts/Amiri_700.ttf");
-    font-display: swap;
-}
 @font-face {
     font-family: Amiri;
-    src: url("../fonts/Amiri.ttf");
+    src: url("../fonts/Amiri.woff2");
     font-display: swap;
 }
-@font-face {
-    font-family: "Cairo-300";
-    src: url("../fonts/Cairo-300");
+/* @font-face {
+    font-family: Amiri_700;
+    src: url("../fonts/Amiri_700.woff2");
     font-display: swap;
-}
+} */
 @font-face {
     font-family: "El_Messiri-regular";
-    src: url("../fonts/El_Messiri-regular.ttf");
+    src: url("../fonts/El_Messiri-regular.woff2");
     font-display: swap;
 }

@@ -91,6 +91,7 @@ main {
 #main-hadith #text {
     margin: 5px 0;
     font-size: 18px;
+    background: teal;
 }
 
 #main-hadith #source {
@@ -120,7 +121,7 @@ main {
     overflow-y: scroll;
 }
 
-.section {
+.section, .open-settings-btn {
     position: relative;
     flex-shrink: 0;
     display: flex;
@@ -137,7 +138,7 @@ main {
     overflow: hidden;
 }
 
-.section:active {
+.section:active, .open-settings-btn:active {
     width: 85%;
     font-size: 20px;
 }
@@ -162,4 +163,93 @@ main {
     color: transparent;
     text-decoration: none;
     cursor: none;
+}
+
+
+
+
+
+
+.settings-container {
+    z-index: 10;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    height: 200px;
+    width: 85%;
+    padding: 10px 0;
+    /* border: 0.5px solid #222; */
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 2px 2px 6px hsla(0deg,0%,50%,0.4);
+    font-family: El_Messiri-regular;
+}
+
+.settings-container-header {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 80%;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ccc;
+}
+
+.settings-container-header .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #222;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.settings-container-header .close-settings-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border: 1.5px solid tomato;
+    border-radius: 5px;
+    background: none;
+    color: tomato;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.settings-container > span {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 95%;
+    padding: 0 20px;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #000;
+}
+.themes-list-label::before {
+    content: ":";
+}
+.themes-list-input {
+    outline: none;
+    height: 40px;
+    width: auto;
+    padding: 0 10px;
+    border: none;
+    border-radius: 10px;
 }
