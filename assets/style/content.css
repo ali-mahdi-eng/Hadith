@@ -25,7 +25,7 @@ body {
 
 #header {
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -128,16 +128,18 @@ svg path {
 
 #main {
     height: 100%;
+    height: calc(100% - 75px);
     width: 100%;
     padding: 90px 0 80px 0;
     overflow-wrap: break-word;
 }
+/*
 #main:after {
     content: "";
     display: block;
     height: 80px;
 }
-
+*/
 
 
 /*========= Notification =========*/
