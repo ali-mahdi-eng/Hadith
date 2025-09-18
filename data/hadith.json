@@ -2,11 +2,6 @@
     "الأحاديث والروايات": {
         "متنوعة": [
             {
-                "sayer": "التنقل بين النصوص",
-                "text": "للأنتقال الى النص التالي إضغط الحافة اليمنى للشاشة، للرجوع الى النص السابق إضغط الحافة اليسرى للشاشة.",
-                "source": "التعليمات"
-            },
-            {
                 "sayer": "الإمام الرضا (عليه السلام)",
                 "text": "يا ابن أبي محمود إذا أخذ الناس يمينا و شمالا فالزم طريقتنا فإنه من لزمنا لزمناه و من فارقنا فارقناه إن أدنى ما يخرج الرجل من الإيمان أن يقول للحصاة هذه نواة ثم يدين بذلك و يبرأ ممن خالفه يا ابن أبي محمود احفظ ما حدثتك به فقد جمعت لك فيه خير الدنيا و الآخرة.",
                 "source": "بحار الأنوار"
@@ -52,43 +47,18 @@
                 "source": "طب الأئمة"
             },
             {
-                "sayer": "Sayer",
-                "text": "Text",
-                "source": "Source"
-            },
-            
-            {
-                "sayer": "Developer",
-                "text": "Thanks For Reading",
-                "source": "App"
+                "sayer": "",
+                "text": "النهاية",
+                "source": "المعلومات"
             }
         ],
-
         "العقل": [
             {
-                "sayer": "Sayer",
-                "text": "Text-0",
-                "source": "Source"
-            },
-            {
-                "sayer": "Sayer",
-                "text": "Text-1",
-                "source": "Source"
+                "sayer": "",
+                "text": "",
+                "source": ""
             }
-            ],
-
-        "الجنة والنار": [
-            {
-                "sayer": "Sayer",
-                "text": "Text-0",
-                "source": "Source"
-            },
-            {
-                "sayer": "Sayer",
-                "text": "Text-1",
-                "source": "Source"
-            }
-            ]
+        ]
     },
     "الأدعية": {
         "subject-0": [
@@ -102,7 +72,7 @@
                 "text": "Text-1",
                 "source": "Source"
             }
-            ],
+        ],
         "subject-1": [
             {
                 "sayer": "Sayer",
@@ -114,7 +84,7 @@
                 "text": "Text-1",
                 "source": "Source"
             }
-            ],
+        ],
         "subject-2": [
             {
                 "sayer": "Sayer",
@@ -126,7 +96,7 @@
                 "text": "Text-1",
                 "source": "Source"
             }
-            ]
+        ]
     },
     "الزيارات": {
         "subject-0": [
@@ -140,7 +110,7 @@
                 "text": "Text-1",
                 "source": "Source"
             }
-            ],
+        ],
         "subject-1": [
             {
                 "sayer": "Sayer",
@@ -152,7 +122,7 @@
                 "text": "Text-1",
                 "source": "Source"
             }
-            ],
+        ],
         "subject-2": [
             {
                 "sayer": "Sayer",
@@ -164,6 +134,6 @@
                 "text": "Text-1",
                 "source": "Source"
             }
-            ]
+        ]
     }
 }
