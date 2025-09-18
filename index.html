@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
         content="A Simple Website Looks Like Moble Apps,
                 To Shear Hadith Ahl Albyt">
-  <link rel="stylesheet" href="assets/style/index.css">
-  <!-- <link rel="stylesheet" href="assets/style/theme/dark.css"> -->
-  <!-- <meta name="theme-color" content="#008080"> -->
-  <meta name="theme-color" content="#282828">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/app_icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/app_icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/app_icon/favicon-16x16.png">
-  <link rel="manifest" href="./manifest.json">
-  <title>Hadith</title>
+    <link rel="stylesheet" href="assets/style/index.css">
+    <link id="app-theme" rel="stylesheet" href="">
+    <script src="assets/script/preloaded-theme.js"></script>
+    <!-- <meta name="theme-color" content="#008080"> -->
+    <meta name="theme-color" content="#0E5251">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/app_icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/app_icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/app_icon/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <title>Hadith</title>
 </head>
 <body>
     
@@ -35,7 +36,7 @@
             <li class="section" data-url="./favourites.html">
                 المحفوظات
             </li>
-            <li class="section not-available">
+            <li class="open-settings-btn">
                 الإعدادات
             </li>
             <!-- <li class="section not-available">
@@ -43,7 +44,24 @@
             </li> -->
         </ul>
     </main>
+    <div class="settings-container">
+        <div class="settings-container-header">
+            <span class="title">الإعدادات</span>
+            <button class="close-settings-btn">X</button>
+        </div>
+        <span class="themes-list">
+            <label class="themes-list-label">المظهر</label>
+            <select class="themes-list-input">
+                <option value="green.css" selected>Green (default)</option>
+                <option value="dark-green.css">Dark Green</option>
+                <option value="teal.css">Teal</option>
+                <option value="dark.css">Dark</option>
+                <option value="light.css">Light</option>
+            </select>
+        </span>
+    </div>
 
+<script src="assets/script/change-theme.js"></script>
 <script src="assets/script/index.js"></script>
 <script src="assets/script/app.js"></script>
 </body>

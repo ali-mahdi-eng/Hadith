@@ -1,7 +1,7 @@
 # Hadith
 
 
-### V1.8.6
+### V1.9.1
 *previous version [1.8.6]*
 
 ---
@@ -10,11 +10,18 @@
 <br>
 
 ## 📝 ToDo:
-- [ ] improve display and UI on mobile app(PWA),
+- [x] Improve UI/UX,
+- [x] Fix not updated GUI problem, when add or remove Hadith to/from favourite GUI not updated directly (icon not directly reacting);
+- [x] Light/Dark Mode & several themes.
 - [ ] Link of page (url) can be shared to anyone to share the same hadith (content), but it must be don't saved in storage (don't save if user come from external link).
-- [ ] Fix not updated GUI problem, when add or remove Hadith to/from favourite GUI not updated directly (icon not directly reacting);
 - [ ] Remake tutorial animation (with animation is more better).
 - [ ] check if first visit show tutorial.
+- [ ] Advanced Settings (Customize font: size, color, family, gaps, line hight).
+- [ ] Add page "About App" in "Settings".
+- [ ] Shear with social media.
+- [ ] Display (ayat, salauat, tsleem, name of "allah") in special colors.
+
+
 
 <br>
 <br>
@@ -48,17 +55,19 @@
 <br>
 
 ## 👎 Neglected:
-- (may not neglected) animation tutorial (for moving between content).
+- animation tutorial (for moving between content).
 
 <br>
 <br>
 
 ## 🔮 Features:
-- [ ] Setting (Customize font: size, color, family, gaps, line hight).
-- [ ] Move page "About App" into "Settings".
-- [ ] Light/Dark Mode.
-- [ ] Several themes.
-- [ ] Shear with social media.
-- [ ] Display (ayat, salauat, tsleem, name of "allah") in special colors.
+1. Light/Dark Mode & Several themes.
+2. Advanced Settings (Customize font: size, color, family, gaps, line hight).
+3. Shear with social media.
+4. Copy hadith.
+5. Save favourites hadith.
+6. Remember the last hadith have been read and continue reading from there.
+7. Support PWA, you can use app from mobile/desktop from home screen directly.
+8. support PWA, app can work offline (this work only if you enter to specific section and read any hadith from there, only that section will be online, you can enter all sections to make all work offline).
 
 

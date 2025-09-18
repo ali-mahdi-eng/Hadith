@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hadith-cache';
+const CACHE_NAME = 'hadith-cache-v1.9.1';
 
 const ASSETS_TO_CACHE = [
     // ROOT
@@ -17,10 +17,15 @@ const ASSETS_TO_CACHE = [
     './assets/style/subjects.css',
     './assets/style/content.css',
     './assets/style/fonts.css',
-    './assets/style/theme/light-white.css',
+    './assets/style/theme/green.css',
+    './assets/style/theme/dark-green.css',
+    './assets/style/theme/teal.css',
+    './assets/style/theme/light.css',
     './assets/style/theme/dark.css',
     // JS
     './assets/script/index.js',
+    './assets/script/preloaded-theme.js',
+    './assets/script/change-theme.js',
     './assets/script/app.js',
     './assets/script/sections.js',
     './assets/script/subjects.js',
@@ -29,15 +34,21 @@ const ASSETS_TO_CACHE = [
     './assets/script/ahl-albyt-list.js',
     './assets/script/hadith-ahl-albyt.js',
     // Fonts
-    './assets/fonts/El_Messiri-regular.ttf',
-    './assets/fonts/Amiri.ttf',
-    './assets/fonts/Amiri_700.ttf',
-    './assets/fonts/Cairo-300.ttf',
+    './assets/fonts/El_Messiri-regular.woff2',
+    './assets/fonts/Amiri.woff2',
+    // './assets/fonts/Amiri_700.woff2',
     // Favicon
     './assets/icons/app_icon/android-chrome-512x512.png',
     './assets/icons/app_icon/android-chrome-192x192.png',
     './assets/icons/app_icon/apple-touch-icon.png',
     './assets/icons/app_icon/favicon.ico',
+    // Images
+    './assets/image/islamic-pattern-1.png',
+    './assets/image/islamic-pattern-2.png',
+    './assets/image/layer/image-1.png',
+    './assets/image/layer/image-2.png',
+    './assets/image/layer/image-3.png',
+    './assets/image/layer/image-4.png',
     // web manifest (PWA)
     './manifest.json',
     // Content

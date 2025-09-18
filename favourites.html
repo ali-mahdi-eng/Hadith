@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
         content="A Simple Website Looks Like Moble Apps,
                 To Shear Hadith Ahl Albyt">
-  <link rel="stylesheet" href="assets/style/content.css">
-  <!-- <link rel="stylesheet" href="assets/style/theme/dark.css"> -->
-  <meta name="theme-color" content="#282828">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/app_icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/app_icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/app_icon/favicon-16x16.png">
-  <link rel="manifest" href="./manifest.json">
-  <title>Favourites</title> <!-- added by js-->
+    <link rel="stylesheet" href="assets/style/content.css">
+    <link id="app-theme" rel="stylesheet" href="">
+    <script src="assets/script/preloaded-theme.js"></script>
+    <meta name="theme-color" content="#0E5251">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/app_icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/app_icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/app_icon/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <title>Favourites</title> <!-- added by js-->
+    <!-- CSS -->
+    <style>
+        .favourites-icon-big {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            width: 60%;
+        margin: 0 auto;
+            aspect-ratio: 1/1;
+            opacity: .1;
+            filter: blur(1px);
+            
+            & svg {
+                height: 100%;
+                width: 100%;
+                
+                & path {
+                    stroke: #0E5251;
+                    stroke-width: 0.5px;
+                }
+            }
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -29,10 +54,11 @@
     </header>
     <main id="main">
         <span id="sayer" dir="auto">
-            إلى الآن لم تضف شيءً!
+            <span> إلى الآن لم تضف شيئاً! </span>
         </span>
         <span id="text" dir="auto">
-            إضغط زر القلب لإضافة الأحاديث
+            <span class="favourites-icon-big"><svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#222222" d="M4.45067 13.9082L11.4033 20.4395C11.6428 20.6644 11.7625 20.7769 11.9037 20.8046C11.9673 20.8171 12.0327 20.8171 12.0963 20.8046C12.2375 20.7769 12.3572 20.6644 12.5967 20.4395L19.5493 13.9082C21.5055 12.0706 21.743 9.0466 20.0978 6.92607L19.7885 6.52734C17.8203 3.99058 13.8696 4.41601 12.4867 7.31365C12.2913 7.72296 11.7087 7.72296 11.5133 7.31365C10.1304 4.41601 6.17972 3.99058 4.21154 6.52735L3.90219 6.92607C2.25695 9.0466 2.4945 12.0706 4.45067 13.9082Z"/></svg></span>
+            <span style="width:100%; padding: 20px 30px;"> إضغط زر القلب لإضافة الأحاديث </span>
         </span>
         <span id="source" dir="auto">
             التطبيق
@@ -43,6 +69,13 @@
             <div class="navigation-btn" id="next-hadith-btn"></div>
         </nav>
         <div id="alert-message" dir="auto"> تم نسخ النص </div>
+    
+    <!--
+        <div calss="patterns-container">
+            <span class="pattern pattern-1"></span>
+            <span class="pattern pattern-2"></span>
+        </div>
+    -->
     </main>
 	
 	

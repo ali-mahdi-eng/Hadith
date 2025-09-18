@@ -1,8 +1,8 @@
 {
-    "name": "حديث",
-    "short_name": "حديث",
+    "name": "Hadith",
+    "short_name": "Hadith",
     "start_url": "./index.html",
-    "display": "standalone",
+    "display": "fullscreen",
     "icons": [
         {
             "src": "./assets/icons/app_icon/android-chrome-192x192.png",
@@ -21,6 +21,6 @@
             "type": "image/png"
         }
     ],
-    "theme_color" : "#282828",
+    "theme_color" : "#008080",
     "background_color": "#008080"
 }
