@@ -1,0 +1,135 @@
+
+:root {
+    color-scheme: #D1EDDE;
+}
+
+/*
+=======================
+    => index.html
+=======================
+*/
+body {
+    background: #D1EDDE;
+    color: #161C12;
+}
+
+#header:after {
+    height: 2px;
+    background-color: #0e525155;
+}
+
+.pattern {
+    z-index: -1;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(10%) opacity(0.1);
+}
+
+.pattern-1 {
+    bottom: 75px;
+    right: 15px;
+    height: 150px;
+    width: 150px;
+    background-image: url('../../image/layer/image-1.png');
+}
+
+.pattern-2 {
+    top: 75px;
+    left: 15px;
+    height: 150px;
+    width: 90px;
+    background-image: url('../../image/layer/image-2.png');
+}
+
+
+
+
+#main-hadith {
+    border: 1px solid #efefef;
+    border: 2px solid #0e525155;
+}
+
+#main-hadith #source, #main-hadith #text{
+    background: none;
+    box-shadow: none;
+}
+
+#section-list {
+    border-color: #0e525155;
+}
+
+.section, .open-settings-btn {
+    border: 1.5px solid #0E5251;
+    background: transparent;
+}
+
+
+/*
+=======================
+    => subject.css
+=======================
+*/
+
+#back-btn:active {
+    background: #b4dcc6cc;
+}
+
+svg path {
+    stroke: #0E5251;
+}
+
+ul {
+    padding: 24px 0 32px 0;
+    gap: 12px;
+}
+
+ul .subject {
+    border: none;
+    border: 1px solid #0E5251aa;
+    box-shadow: 1px 1px 3px #00000016;
+}
+
+/*
+=======================
+    => content.css
+=======================
+*/
+
+#add-to-favourite-btn:active, #copy-btn:active, #back-btn:active {
+    background: #b4dcc6cc;
+}
+
+#add-to-favourite-btn:active svg,
+.favourited {
+    fill: #0E5251;
+}
+svg path {
+    stroke: #0E5251;
+}
+
+#alert-message {
+    border: 1px solid #dfdfdf;
+    background: #b4dcc6cc;
+}
+
+#sayer {
+    color: #0E5251;
+}
+
+#text {
+    background: #F3F9ED;
+    color: #0F160F;
+    box-shadow: 2px 2px 6px hsla(0deg,0%,50%,0.2);
+}
+
+#source {
+    bottom: 30px;
+    font-size: 1.1rem;
+    color: #0E5251;
+    background: none;
+}
+#source:before, #source:after {
+    content: "";
+    display: none;
+}

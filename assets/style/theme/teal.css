@@ -1,0 +1,159 @@
+:root {
+    color-scheme: #008080;
+}
+
+body {
+    background: #008080; /* teal */
+    color: #efefef;
+}
+
+#header {
+    background: transparent;
+}
+
+
+/*
+=======================
+    => index.css
+=======================
+*/
+
+
+body {
+    background: teal;
+    color: #efefef;
+}
+
+
+/*========= Notification =========*/
+.notification {
+    background: #222;
+    color: white;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}
+
+.update-now-btn {
+    background: #fff;
+}
+/*========= Notification =========*/
+
+
+#main-hadith {
+    border: 1px solid #efefef;
+}
+
+#main-hadith #text {
+    background: teal;
+}
+
+#main-hadith #source {
+    background: none;
+}
+#main-hadith #source::after {
+    content: "";
+}
+
+#section-list {
+    border-top: 1px solid #ddd;
+}
+
+.section, .open-settings-btn{
+    border: 1.5px solid #dfdfdf;
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+/*
+=======================
+    => subjects.css
+=======================
+*/
+
+#header:after {
+    height: 1px;
+    background: #ddd;
+}
+
+#back-btn {
+    background: transparent;
+}
+
+#back-btn:active {
+    background: #04939386;
+}
+svg path {
+    stroke: #eee;
+    stroke-width: 1.3px;
+}
+
+
+ul .subject {
+    border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
+/*
+=======================
+    => content.css
+=======================
+*/
+
+#copy-btn, #back-btn, #add-to-favourite-btn {
+    border: none;
+    background: transparent;;
+}
+
+#copy-btn:active, #add-to-favourite-btn:active, #back-btn:active {
+    background: #04939386;
+}
+.favourited {
+    fill: #eee;
+}
+
+svg path {
+    stroke: #eee;
+    stroke-width: 1.3px;
+}
+
+
+#alert-message {
+    border: 1px solid #dfdfdf;
+    background: #04939386;
+}
+
+#navigation .navigation-btn {
+    color: #eee;
+}
+
+
+#sayer {
+    color: #dfdfdf;
+}
+
+#text {
+    background: #007a7a;
+    color: #dfdfdf;
+}
+
+#source {
+    background: #04939386;
+}
+
+#source:before, #source:after {
+    content: " || ";
+    opacity: .3;
+}
+
+

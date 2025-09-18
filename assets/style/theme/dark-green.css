@@ -1,6 +1,6 @@
 
 :root {
-    color-scheme: #26272e;
+    color-scheme: #1D3F23;
 }
 
 /*
@@ -9,8 +9,20 @@
 =======================
 */
 body {
-    background: #171717;
+    background: #1D3F23;
     color: #efefef;
+}
+
+#main::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../../image/islamic-pattern-1.png');
+    background-size: 150px 150px;
+    background-repeat: repeat;
+    filter: brightness(10%) opacity(0.1);
 }
 
 #main-hadith {
@@ -34,8 +46,9 @@ body {
 */
 
 #back-btn:active {
-    background: #26272e;
+    background: #04935b60;
 }
+
 svg path {
     stroke: #eee;
 }
@@ -50,10 +63,8 @@ ul .subject {
 =======================
 */
 
-#add-to-favourite-btn:active,
-#copy-btn:active,
-#back-btn:active {
-    background: #26272e;
+#add-to-favourite-btn:active, #copy-btn:active, #back-btn:active {
+    background: #04935b60;
 }
 
 #add-to-favourite-btn:active svg,
@@ -66,18 +77,19 @@ svg path {
 
 #alert-message {
     border: 1px solid #dfdfdf;
-    background: #171717;
+    background: #04935b60;
 }
 
 #sayer {
-    color: #dfdfdf;
+    color: #d0d0d0;
 }
 
 #text {
-    background: #32354a;
-    color: #dfdfdf;
+    background: hsl(130.6,37%,25%, 0.5);
+    color: #d0d0d0;
 }
 
 #source {
-    background: #222431;
+    background: hsla(130.6,37%,25%,0.5);
+
 }
