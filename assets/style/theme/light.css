@@ -17,7 +17,7 @@ body {
     color: #202020;
 }
 
-#text {
+#text, #duaa {
     background: #dedede;
     color: #141414;
 }
@@ -30,18 +30,25 @@ body {
     color: #222;
 }
 
+.more-btn-icon svg {
+    fill: #222;
+}
+
+
+
+
 
 #alert-message {
     border: 1px solid #171717;
     background: #efefef;
 }
 
-#copy-btn:active, #add-to-favourite-btn:active, #back-btn:active {
+#copy-btn:active, #add-to-favourite-btn:active, #back-btn:active, #share-btn:active {
     background: #e1e2e5;
 }
 
-
-#add-to-favourite-btn:hover svg {
+#share-btn svg,
+#add-to-favourite-btn:active svg {
     fill: #222;
 }
 svg path {

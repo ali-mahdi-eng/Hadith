@@ -53,6 +53,7 @@ svg path {
     stroke: #eee;
 }
 
+
 ul .subject {
     border: 1px solid #ddd;
 }
@@ -63,10 +64,11 @@ ul .subject {
 =======================
 */
 
-#add-to-favourite-btn:active, #copy-btn:active, #back-btn:active {
+#add-to-favourite-btn:active, #copy-btn:active, #back-btn:active, #share-btn:active {
     background: #04935b60;
 }
 
+#share-btn svg,
 #add-to-favourite-btn:active svg,
 .favourited {
     fill: #eee;
@@ -84,7 +86,7 @@ svg path {
     color: #d0d0d0;
 }
 
-#text {
+#text, #duaa {
     background: hsl(130.6,37%,25%, 0.5);
     color: #d0d0d0;
 }

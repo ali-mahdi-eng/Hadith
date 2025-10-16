@@ -64,6 +64,9 @@ body {
     background: transparent;
 }
 
+.more-btn-icon svg {
+    fill: #0E5251;
+}
 
 /*
 =======================
@@ -96,10 +99,11 @@ ul .subject {
 =======================
 */
 
-#add-to-favourite-btn:active, #copy-btn:active, #back-btn:active {
+#add-to-favourite-btn:active, #copy-btn:active, #back-btn:active, #share-btn:active {
     background: #b4dcc6cc;
 }
 
+#share-btn svg,
 #add-to-favourite-btn:active svg,
 .favourited {
     fill: #0E5251;
@@ -117,7 +121,7 @@ svg path {
     color: #0E5251;
 }
 
-#text {
+#text, #duaa {
     background: #F3F9ED;
     color: #0F160F;
     box-shadow: 2px 2px 6px hsla(0deg,0%,50%,0.2);

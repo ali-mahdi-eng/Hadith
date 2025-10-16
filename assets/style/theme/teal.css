@@ -42,13 +42,7 @@ body {
     border: 1px solid #efefef;
 }
 
-#main-hadith #text {
-    background: teal;
-}
 
-#main-hadith #source {
-    background: none;
-}
 #main-hadith #source::after {
     content: "";
 }
@@ -115,9 +109,11 @@ ul .subject {
     background: transparent;;
 }
 
-#copy-btn:active, #add-to-favourite-btn:active, #back-btn:active {
+#copy-btn:active, #add-to-favourite-btn:active, #back-btn:active, #share-btn:active {
     background: #04939386;
 }
+
+#share-btn svg,
 .favourited {
     fill: #eee;
 }
@@ -142,7 +138,7 @@ svg path {
     color: #dfdfdf;
 }
 
-#text {
+#text, #duaa {
     background: #007a7a;
     color: #dfdfdf;
 }

@@ -50,12 +50,11 @@ ul .subject {
 =======================
 */
 
-#add-to-favourite-btn:active,
-#copy-btn:active,
-#back-btn:active {
+#add-to-favourite-btn:active, #copy-btn:active, #back-btn:active, #share-btn:active {
     background: #26272e;
 }
 
+#share-btn svg,
 #add-to-favourite-btn:active svg,
 .favourited {
     fill: #eee;
@@ -73,7 +72,7 @@ svg path {
     color: #dfdfdf;
 }
 
-#text {
+#text, #duaa {
     background: #32354a;
     color: #dfdfdf;
 }
