@@ -1,21 +1,22 @@
-var sayer = document.getElementById('sayer');
-var text = document.getElementById('text');
-var source = document.getElementById('source');
+let sayer = document.getElementById('sayer');
+let text = document.getElementById('text');
+let source = document.getElementById('source');
 
-var nextHadithBtn = document.getElementById('next-hadith-btn');
-var priviousHadithBtn = document.getElementById('privious-hadith-btn');
+const nextHadithBtn = document.getElementById('next-hadith-btn');
+const priviousHadithBtn = document.getElementById('privious-hadith-btn');
 
-var backBtn = document.getElementById('back-btn');
-var copyBtn = document.getElementById('copy-btn');
-var addToFavouritesBtn = document.getElementById('add-to-favourite-btn');
-var alertMessage = document.getElementById('alert-message');
+const backBtn = document.getElementById('back-btn');
+const copyBtn = document.getElementById('copy-btn');
+const addToFavouritesBtn = document.getElementById('add-to-favourite-btn');
+const shareBtn = document.getElementById('share-btn');
+const alertMessage = document.getElementById('alert-message');
 
 
 
 // Don't Delete Tutorial, will added as first element in data array.
 const tutorial = {
     "sayer": "التنقل بين النصوص",
-    "text": "للأنتقال الى النص التالي إضغط الحافة اليمنى للشاشة، للرجوع الى النص السابق إضغط الحافة اليسرى للشاشة.",
+    "text": "للإنتقال الى النص التالي إضغط الحافة اليمنى للشاشة، للرجوع الى النص السابق إضغط الحافة اليسرى للشاشة.",
     "source": "التعليمات"
 }
 
@@ -73,9 +74,7 @@ async function getJsonDataFromAPI() {
     let url = "./data/hadith.json";
     try {
         const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`response status: ${response.status}`);
-        }
+        if (!response.ok) { throw new Error(`response status: ${response.status}`); }
         const data = await response.json();
         handleData(data);
     }
@@ -112,6 +111,16 @@ async function getJsonDataFromAPI() {
         copyBtn.addEventListener("click", ()=>{ copyToClipboard(hadithList[storage.currentIndex]) });
         // Add To Favourites
         addToFavouritesBtn.addEventListener("click", ()=>{ addToFavourites(hadithList[storage.currentIndex]) });
+        // Share Hadith
+        if (navigator.share) {
+            shareBtn.style.visibility = 'visible'; // Hide the button if not supported
+            shareBtn.addEventListener('click',()=>{ shareHadith(hadithList[storage.currentIndex]) });
+        } else {
+            // Fallback for browsers that don't support the Web Share API
+            shareBtn.style.visibility = 'hidden'; // Hide the button if not supported
+            console.warn('warning: Web Share API not supported in this browser.');
+        }
+        
         // Handle Navigation Buttons
         function NavigationBetweenHadith(navigateDirection = 1) {
             if (navigateDirection === -1 && storage.currentIndex === 0) return;
@@ -137,8 +146,22 @@ getJsonDataFromAPI();
 
 
 
+async function shareHadith(hadith) {
+    try {
+        await navigator.share({
+            text: `${hadith.sayer}: \n ${hadith.text} \n\n المصدر: ${hadith.source}`,
+        });
+        console.log('Content shared successfully');
+    } catch (error) {
+        console.error('Error sharing:', error);
+    }
+}
+
+
+
 function copyToClipboard(currentHadith) {
-    let copyText = `${currentHadith.sayer}: \n ${currentHadith.text} \n \n #${currentHadith.source}`;
+    let sourcePrefix = "المصدر: ";
+    let copyText = `${currentHadith.sayer}: \n ${currentHadith.text} \n\n ${sourcePrefix}${currentHadith.source}`;
     window.navigator.clipboard.writeText(copyText);
     alertMessage.textContent = "تم نسخ النص";
     alertMessage.style.visibility = "visible";
