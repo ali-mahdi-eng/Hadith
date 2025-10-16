@@ -31,15 +31,7 @@ Preview: [https://ali-mahdi-eng.github.io/Hadith/](https://ali-mahdi-eng.github.
 <br>
 <br>
 
-## 📝 ToDo:
-- [x] Make report or give feedback using external like can be opened with email (send feedback to my personal Gmail)
-- [x] Add more sections in main page (duaas, zyarat, munajat, khutab, ahl-al-bayt).
-- [x] Style duaas/zyarat content, to be more readable.
-- [x] Re-Design local database.
-- [x] Add (update now) button in settings to update service worker manually.
-- [x] Enhance format of text/source when copying text using copy button.
-- [x] Add "About App" Section (in "Settings").
-- [x] Shear with social media.
+## 📝 In Plain:
 - [ ] Desktop Responsibility (Re-Design UI to support desktop).
 - [ ] Re-Design (add to favourites) system.
 - [ ] Add option to (hide share button) in settings.
@@ -52,38 +44,4 @@ Preview: [https://ali-mahdi-eng.github.io/Hadith/](https://ali-mahdi-eng.github.
 
 
 
-<br>
-<br>
-
-## ✅ Done [0.x.0]:
-#### [1.9.1]
-- [x] Improve UI/UX,
-- [x] Light/Dark Mode & several themes.
-#### [older]
-- [x] Add Save Favourites Hadith Feature (the same algorithm of bookmark feature).
-- [x] fix issues of getting index saved of last hadith in localStorage
-- [x] In "ahadith-mutafariqa" page, save lastest hadith has been read.
-- [x] Add content to (ahadith-mutafariqa) page.
-- [x] Update version in all pages from js file.
-
-<br>
-<br>
-
-## 🐞 Bugs Fixed [0.0.x]:
-#### [1.9.1]
-- [x] Fix not updated GUI problem, when add or remove Hadith to/from favourite GUI not updated directly (icon not directly reacting);
-#### [older]
-- [x] enhance `update Now` button style.
-- [x] small UI/UX improvement (display page title in header, enhance header item position).
-- [x] change icons color (darkblue => teal).
-- [x] Upload Project on GitHub on: [Live Page](https://ali-mahdi-eng.github.io/Hadith/) , [Project Files](https://github.com/ali-mahdi-eng/Hadith)
-- [x] Upload Website to host ([netlify.com](https://www.netlify.com/))
-- [x] Change Some Directories (add "style" & "script" to assets directory).
-- [x] Fix And Improve Storage (improve structure or design of saved data in localStorage, like previous hadith index..etc).
-- [x] Add light (white) mode (use can't change themes yet, in next versions he will can).
-- [x] Improve Accessibility (Add "area-lable" attribute for buttons).
-- [x] Fix Loading problem, (ahadith-mutafariqa.html) page does not loading.
-- [x] fix problem in loading page, some times pages doesn't work (problem reduced but not solved).
-- [x] Use async/await instead of using .then() to handle fetch function.
-- [x] user can see (hyper link) when long press on them [use javascript to solve].
 
