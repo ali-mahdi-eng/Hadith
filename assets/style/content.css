@@ -36,13 +36,12 @@ body {
 }
 
 
-#copy-btn, #back-btn, #add-to-favourite-btn {
+#copy-btn, #back-btn, #share-btn, #add-to-favourite-btn {
     position: absolute;
     top: 50%;
     top: 60%;
     transform: translateY(-50%);
-    /* height: 40px;
-    width: 40px; */
+    visibility: hidden;
     height: 45px;
     width: 45px;
     height: 45px;
@@ -53,20 +52,19 @@ body {
     transition: .1s linear;
 }
 #copy-btn {
-    visibility: hidden;
-    /* left: 10px; */
-    left: 15px;
     left: 20px;
 }
 #add-to-favourite-btn {
-    visibility: hidden;
-    /* left: 65px; */
-    left: 70px;
     left: 80px;
 }
+#share-btn {
+    left: 140px;
+    & svg {
+        fill: #eee;
+    }
+}
 #back-btn {
-    /* right: 10px; */
-    right: 15px;
+    visibility: visible;
     right: 25px;
     overflow: hidden;
 }
@@ -83,39 +81,40 @@ body {
     color: transparent;
 }
 
-#copy-btn:active, #add-to-favourite-btn:active, #back-btn:active {
+#copy-btn:active, #share-btn:active, #add-to-favourite-btn:active, #back-btn:active {
     border-radius: 10px;
     background: #04939386;
     transition: .1s linear;
 }
 svg {
-    /* height: 28px;
-    width: 28px; */
-    height: 30px;
-    width: 30px;
     height: 38px;
     width: 38px;
     transition: .1s linear;
 }
 
 #copy-btn svg {
-    height: 28px;
-    width: 28px;
     height: 35px;
     width: 35px;
 }
-
 #copy-btn:active svg {
     height: 24px;
     width: 24px;
 }
+
+#share-btn svg {
+    height: 42px;
+    width: 42px;
+}
+#share-btn:active svg {
+    height: 32px;
+    width: 32px;
+}
+
 #add-to-favourite-btn:active svg {
-    /* height: 32px;
-    width: 32px; */
     height: 35px;
     width: 35px;
+    fill: #eee;
 }
-#add-to-favourite-btn:active svg,
 .favourited {
     fill: #eee;
 }
@@ -142,52 +141,6 @@ svg path {
 */
 
 
-/*========= Notification =========*/
-.notification {
-    z-index: 10000;
-    position: fixed;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 85%;
-    border-radius: 18px;
-    background: #222;
-    color: white;
-    padding: 8px 12px;
-    font-size: 16px;
-    font-family: El_Messiri-regular;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
-}
-.notification-in {
-    animation: 0.5s notification-in ease;
-}
-.notification-out {
-    animation: 0.5s notification-in ease;
-}
-@keyframes notification-in {
-    0% {top: -200px;}
-    100% {top: 15px;}
-}
-@keyframes notification-out {
-    0% {top: 15px;}
-    100% {top: -200px;}
-}
-
-.update-now-btn {
-    position: relative;
-    right: 10px;
-    order: -1;
-    padding: 10px 20px;
-    background: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-family: El_Messiri-regular;
-}
-/*========= Notification =========*/
 
 
 
@@ -345,3 +298,55 @@ svg path {
 }
 
 
+
+
+
+
+
+
+/*========= Notification =========*/
+.notification {
+    z-index: 10000;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    border-radius: 18px;
+    background: #222;
+    color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-family: El_Messiri-regular;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}
+.notification-in {
+    animation: 0.5s notification-in ease;
+}
+.notification-out {
+    animation: 0.5s notification-in ease;
+}
+@keyframes notification-in {
+    0% {top: -200px;}
+    100% {top: 15px;}
+}
+@keyframes notification-out {
+    0% {top: 15px;}
+    100% {top: -200px;}
+}
+
+.update-now-btn {
+    position: relative;
+    right: 10px;
+    order: -1;
+    padding: 10px 20px;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: El_Messiri-regular;
+}
+/*========= Notification =========*/

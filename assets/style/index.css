@@ -8,16 +8,305 @@
 }
 
 body {
-    /* background: #171717; */
-    background: teal;
+    height: 100vh;   /* Old support */
+    height: 100dvh;  /* Modern support (takes priority if available) */
+    /* vh(viewport height): involving address bar height*/
+    /* dvh(dynamic viewport height): not involving address bar height*/
+    width: 100vw;
+    background: #008080; /* teal */
     color: #efefef;
     user-select: none;
 }
 
 main {
+    position: relative;
     height: 100%;
     width: 100%;
+    /* background: darkred; */
+    overflow: auto;
 }
+
+
+
+
+
+#main-hadith {
+    user-select: text;
+    position: relative;
+    top: 30px;
+    right: 50%;
+    transform: translateX(50%);
+    min-height: 100px;
+    height: auto;
+    width: 90%;
+    padding: 10px 10px;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: El_Messiri-regular;
+    opacity: .8;
+    
+    & span {
+        display: block;
+    }
+    & #text {
+        margin: 5px 0;
+        font-size: 18px;
+        background: none;
+    }
+    & #source {
+        background: none;
+    }
+    & #source::before {
+        content: "#";
+    }
+}
+
+
+
+
+#section-list {
+    position: absolute;
+    top: 45%;
+    top: 43%;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* max-height: 330px; */
+    height: calc(auto);
+    width: 90%;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    list-style: none;
+    transition: all 0.4s linear;
+    overflow-y: scroll;
+}
+
+
+.section, .open-settings-btn {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 90%;
+    border: 1.5px solid #dfdfdf;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 22px;
+    font-family: El_Messiri-regular;
+    transition: .15s ease-in-out;
+    overflow: hidden;
+}
+
+.section:active, .open-settings-btn:active {
+    width: 85%;
+    font-size: 20px;
+}
+
+.hidden-section {
+    display: none; /* Changing From JavaScripts*/
+}
+
+.more-btn {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    height: 50px;
+    width: 150px;
+    /* padding: 10px; */
+    margin: 10px 0 0 0;
+    background: transparent;
+    opacity: 0.7;
+}
+.more-btn-text {
+    font-size: 1.1rem;
+    font-family: El_Messiri-regular;
+    transition: .15s ease-in-out;
+}
+.more-btn-icon svg {
+    height: 24px;
+    width: 24px;
+    transition: .15s ease-in-out;
+}
+
+.more-btn:active {
+    opacity: 1;
+    & .more-btn-text  {
+        font-size: 1.3rem;
+    }
+    & .more-btn-icon svg {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+
+
+.not-available {
+    pointer-events: none;
+    opacity: .6;
+}
+
+.hidden-link {
+    /* >> parent of this element must have relative position. */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: none;
+    color: transparent;
+    text-decoration: none;
+    cursor: none;
+}
+
+
+
+.settings-container {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    height: clamp(200px, auto, 50vh);
+    width: 85%;
+    padding: 10px 0;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 2px 2px 6px hsla(0deg,0%,50%,0.4);
+    font-family: El_Messiri-regular;
+}
+
+.settings-header,
+.about-app-header {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    height: 50px;
+    width: 80%;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ccc;
+}
+
+.settings-title,
+.about-app-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #222;
+    font-size: 1.5rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.settings-header .close-settings-btn,
+.about-app-header .close-about-app-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border: 1.5px solid tomato;
+    border-radius: 5px;
+    background: none;
+    color: tomato;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.settings-container .settings-item {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 95%;
+    padding: 0 20px;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #000;
+    transition: all .1s ease;
+}
+.themes-list-label::after {
+    content: ":";
+}
+.themes-list-input {
+    outline: none;
+    height: 40px;
+    width: auto;
+    padding: 0 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.open-about-app-btn:active, .update-now-from-settings-btn:active {
+    border: 1.5px solid #222;
+}
+
+
+.about-app-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    height: clamp(200px, 300px, 50vh);
+    width: clamp(100%, 105%, 100vw);
+    padding: 10px;
+    /* border: 2px solid #ccc; */
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    box-shadow: 2px 2px 6px hsla(0deg,0%,50%,0.4);
+    font-family: El_Messiri-regular;
+}
+.about-app-container .about-app-text {
+    width: 100%;
+    padding: 10px;
+}
+
+.contact-us {
+    display: block;
+    justify-self: center;
+    margin: 10px 0;
+    color: #479cff;
+}
+
+
+
+
+
+
+
+
 
 
 /*========= Notification =========*/
@@ -66,190 +355,3 @@ main {
     font-family: El_Messiri-regular;
 }
 /*========= Notification =========*/
-
-
-#main-hadith {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    min-height: 100px;
-    height: auto;
-    width: 90%;
-    padding: 10px 10px;
-    border: 1px solid #efefef;
-    border-radius: 10px;
-    font-size: 18px;
-    font-family: El_Messiri-regular;
-    opacity: .8;
-}
-
-#main-hadith span {
-    display: block;
-}
-
-#main-hadith #text {
-    margin: 5px 0;
-    font-size: 18px;
-    background: teal;
-}
-
-#main-hadith #source {
-    background: none;
-}
-#main-hadith #source:before {
-    content: "#";
-}
-
-
-#section-list {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    /* height: 50vh; */
-    height: auto;
-    width: 90%;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-    /* border-bottom: 1px solid #ddd; */
-    list-style: none;
-    overflow-y: scroll;
-}
-
-.section, .open-settings-btn {
-    position: relative;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 90%;
-    border: 1.5px solid #dfdfdf;
-    border-radius: 5px;
-    background: transparent;
-    font-size: 22px;
-    font-family: El_Messiri-regular;
-    transition: .15s ease-in-out;
-    overflow: hidden;
-}
-
-.section:active, .open-settings-btn:active {
-    width: 85%;
-    font-size: 20px;
-}
-
-
-
-.not-available {
-    pointer-events: none;
-    opacity: .6;
-}
-
-.hidden-link {
-    /* >> parent of this element must have relative position. */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: none;
-    color: transparent;
-    text-decoration: none;
-    cursor: none;
-}
-
-
-
-
-
-
-.settings-container {
-    z-index: 10;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    display: none;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
-    height: 200px;
-    width: 85%;
-    padding: 10px 0;
-    /* border: 0.5px solid #222; */
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 2px 2px 6px hsla(0deg,0%,50%,0.4);
-    font-family: El_Messiri-regular;
-}
-
-.settings-container-header {
-    position: relative;
-    display: flex;
-    height: 50px;
-    width: 80%;
-    margin-bottom: 5px;
-    border-bottom: 2px solid #ccc;
-}
-
-.settings-container-header .title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #222;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.settings-container-header .close-settings-btn {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    width: 30px;
-    border: 1.5px solid tomato;
-    border-radius: 5px;
-    background: none;
-    color: tomato;
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-
-.settings-container > span {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    width: 95%;
-    padding: 0 20px;
-    background: #ddd;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    color: #000;
-}
-.themes-list-label::before {
-    content: ":";
-}
-.themes-list-input {
-    outline: none;
-    height: 40px;
-    width: auto;
-    padding: 0 10px;
-    border: none;
-    border-radius: 10px;
-}

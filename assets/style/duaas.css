@@ -1,0 +1,70 @@
+@import url('./fonts.css');
+
+
+#header {
+    position: absolute;
+    height: 80px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+#main {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(100% - 80px);
+    width: 100%;
+    /* padding: 90px 0 80px 0; */
+    padding: 10px 0;
+    overflow-y: scroll;
+}
+
+
+#share-btn {
+    left: 80px;
+}
+
+
+#duaa {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    height: auto;
+    width: 95%;
+    padding: 35px 15px 30px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #007a7a;
+    color: #dfdfdf;
+    font-family: Amiri, Arial;
+
+}
+
+
+
+#duaa-name {
+    font-size: 2rem;
+}
+
+#duaa-text {
+    align-self: flex-start;
+    word-break: break-word;
+    white-space: pre-line;
+    font-size: 20px;
+    font-size: 1.4rem;
+    /* line-height: 64px; */
+    line-height: 56px;
+    font-family: Amiri, Arial;
+}
+
+#duaa-source {
+    font-size: 1.2rem;
+    opacity: .7;
+    /* font-family: El_Messiri-regular; */
+}
+
