@@ -1,21 +1,22 @@
-const CACHE_NAME = 'hadith-cache-v1.9.1';
+const CACHE_NAME = 'hadith-cache-v2.0.0';
 
 const ASSETS_TO_CACHE = [
     // ROOT
     './',
     // HTML
     './index.html',
-    './sections.html',
     './subjects.html',
     './content.html',
+    './duaas.html',
     './favourites.html',
-    './ahl-albyt-list.html',
-    './hadith-ahl-albyt.html',
+    './mutafariqa-list.html',
+    './ahadith-mutafariqa.html',
     './offline.html',
     // CSS
     './assets/style/index.css',
     './assets/style/subjects.css',
     './assets/style/content.css',
+    './assets/style/duaas.css',
     './assets/style/fonts.css',
     './assets/style/theme/green.css',
     './assets/style/theme/dark-green.css',
@@ -27,12 +28,12 @@ const ASSETS_TO_CACHE = [
     './assets/script/preloaded-theme.js',
     './assets/script/change-theme.js',
     './assets/script/app.js',
-    './assets/script/sections.js',
     './assets/script/subjects.js',
     './assets/script/content.js',
+    './assets/script/duaas.js',
     './assets/script/favourites.js',
-    './assets/script/ahl-albyt-list.js',
-    './assets/script/hadith-ahl-albyt.js',
+    './assets/script/mutafariqa-list.js',
+    './assets/script/ahadith-mutafariqa.js',
     // Fonts
     './assets/fonts/El_Messiri-regular.woff2',
     './assets/fonts/Amiri.woff2',
@@ -51,9 +52,16 @@ const ASSETS_TO_CACHE = [
     './assets/image/layer/image-4.png',
     // web manifest (PWA)
     './manifest.json',
-    // Content
+    // Content (local database, data written by Ali Mahdi)
+    './data/index.json',
     './data/hadith.json',
-    './data/api/shia/ahl-albyt-list.json',
+    './data/ahl-albayt.json',
+    './data/duaas.json',
+    './data/zyarat.json',
+    './data/munajat.json',
+    './data/khutab.json',
+    // Ahadith Mutafariqa from net (local json, data source is unknown)
+    './data/api/shia/mutafariqa-list.json',
     './data/api/shia/Mohammed(PBUH).json',
     './data/api/shia/Imam_Ali(as).json',
     './data/api/shia/Fatima-Zahra(as).json',

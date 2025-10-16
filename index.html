@@ -17,48 +17,62 @@
     <link rel="manifest" href="./manifest.json">
     <title>Hadith</title>
 </head>
-<body>
-    
+<body dir="auto">
     <main id="main">
         <div id="main-hadith">
             <span dir="auto" id="sayer">عن الهروي عن الإمام الرضا أنه قال: </span>
             <span dir="auto" id="text">رحم الله عبد أحيا أمرنا فقلت له: وكيف يحيي أمركم؟ قال: يتعلم علومنا ويعلمها الناس، فإن الناس لو علموا محاسن كلامنا لأتبعونا.</span>
             <span dir="auto" id="source">عيون أخبار الرضا</span>
         </div>
-        
+        <!-- Navigation Section --> 
         <ul id="section-list">
-            <li class="section" data-url="./sections.html">
-                المواضيع
-            </li>
-            <li class="section" data-url="./ahl-albyt-list.html">
-                أهل البيت
-            </li>
-            <li class="section" data-url="./favourites.html">
-                المحفوظات
-            </li>
-            <li class="open-settings-btn">
-                الإعدادات
-            </li>
-            <!-- <li class="section not-available">
-                عن التطبيق
-            </li> -->
+            <!-- Always Shown Sections -->
+            <li class="section" data-url="./subjects.html" data-section="hadith">الأحاديث والروايات</li>
+            <li class="section" data-url="./subjects.html" data-section="duaas">الأدعية</li>
+            <li class="section" data-url="./favourites.html" data-section="favourites">المحفوظات</li>
+            <li class="open-settings-btn">الإعدادات</li>
+            <!-- Hidden Section -->
+            <li class="section hidden-section" data-url="./subjects.html" data-section="zyarat">الزيارات</li>
+            <li class="section hidden-section" data-url="./mutafariqa-list.html" data-section="mutafariqa">أحاديث متفرقة</li>
+            <li class="section hidden-section not-available" data-url="./subjects.html" data-section="munajat">المناجاة</li>
+            <li class="section hidden-section not-available" data-url="./subjects.html" data-section="khutab">خُطب</li>
+            <li class="section hidden-section not-available" data-url="./subjects.html" data-section="ahl-albayt">أهل البيت</li>
+            <!-- Show/Hide More Sections -->
+            <span class="more-btn">
+                <span class="more-btn-text">عرض المزيد</span>
+                <span class="more-btn-icon"><svg fill="#fff" stroke="#222" stroke-width="1" height="24px" width="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.04 512.04" xml:space="preserve"><path d="M508.933,146.807l-42.347-42.347c-4.267-4.053-10.88-4.053-15.147,0L256.027,300.193L60.507,104.46c-4.267-4.053-10.88-4.053-15.147,0L3.12,146.807c-4.16,4.16-4.16,10.88,0,15.04L248.453,407.5c4.16,4.16,10.88,4.16,15.04,0l245.333-245.653C513.093,157.687,513.093,150.967,508.933,146.807z M256.027,384.887L25.733,154.38l27.2-27.307l195.52,195.733c4.267,4.053,10.88,4.053,15.147,0l195.52-195.733l27.2,27.307L256.027,384.887z"/></svg></span>
+            </span>
         </ul>
     </main>
+    <!-- Settings -->
     <div class="settings-container">
-        <div class="settings-container-header">
-            <span class="title">الإعدادات</span>
+        <div class="settings-header">
+            <span class="settings-title">الإعدادات</span>
             <button class="close-settings-btn">X</button>
         </div>
-        <span class="themes-list">
+        <span class="settings-item themes-list">
             <label class="themes-list-label">المظهر</label>
             <select class="themes-list-input">
-                <option value="green.css" selected>Green (default)</option>
-                <option value="dark-green.css">Dark Green</option>
-                <option value="teal.css">Teal</option>
-                <option value="dark.css">Dark</option>
-                <option value="light.css">Light</option>
+                <option value="green.css" selected>أخضر (إفتراضي)</option>
+                <option value="dark-green.css">أخضر داكن</option>
+                <option value="teal.css">أخضر مُزرق</option>
+                <option value="dark.css">داكن</option>
+                <option value="light.css">فاتح</option>
             </select>
         </span>
+        <span class="settings-item open-about-app-btn">معلومات عن التطبيق</span>
+        <span class="settings-item update-now-from-settings-btn" style="display:none;">أُنقر للتحديث</span>
+        <!-- Containers -->
+        <section class="about-app-container">
+            <div class="about-app-header">
+                <span class="about-app-title">تطبيق حديث  </span>
+                <button class="close-about-app-btn">X</button>
+            </div>
+            <span class="about-app-text">
+                <span>تطبيق مخصص لعرض الأحاديث المروية عن النبي محمد صلى الله عليه وآله وسلم وأهل بيته عليهم السلام، بالإضافة إلى مجموعة من الأدعية والزيارات، وذلك لتسهيل الوصول إليها والانتفاع بها في أي وقت. يتميز التطبيق بكونه مجاني وسهل الاستخدام، ليكون في متناول الجميع.</span>
+                <a class="contact-us" href="mailto:ali.mahdi.engineer@gmail.com?subject=Hadith app feedback">الابلاغ عن مشكلة</a>
+            </span>
+        </section>
     </div>
 
 <script src="assets/script/change-theme.js"></script>
