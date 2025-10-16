@@ -1,0 +1,79 @@
+{
+"meta": {
+    "version": "1.0",
+    "lastUpdate": "2025-09-20"
+},
+"ahl-albayt": {
+    "النبي محمد (صلى الله عليه وآله)": {
+        "name": "النبي محمد (صلى الله عليه وآله)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "فاطمة الزهراء (ع)": {
+        "name": "فاطمة الزهراء (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام علي (ع)": {
+        "name": "الإمام علي (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام الحسن (ع)": {
+        "name": "الإمام الحسن (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام الحسين (ع)": {
+        "name": "الإمام الحسين (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام السجاد (ع)": {
+        "name": "الإمام السجاد (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام الباقر (ع)": {
+        "name": "الإمام الباقر (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام الصادق (ع)": {
+        "name": "الإمام الصادق (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام الكاظم (ع)": {
+        "name": "الإمام الكاظم (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام الرضا (ع)": {
+        "name": "الإمام الرضا (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام الجواد (ع)": {
+        "name": "الإمام الجواد (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام الهادي (ع)": {
+        "name": "الإمام الهادي (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    "الإمام العسكري (ع)": {
+        "name": "الإمام العسكري (ع)",
+        "life": "string",
+        "info-source": "string"
+    },
+    
+    "الإمام المهدي (عجل الله فرجه)": {
+        "name": "الإمام المهدي (عجل الله فرجه)",
+        "life": "string",
+        "info-source": "string"
+    }
+}
+}
