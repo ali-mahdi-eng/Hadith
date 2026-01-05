@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.netlify.hadith_ahlulbayt.twa",
+        "sha256_cert_fingerprints": ["DB:28:76:1B:00:E0:40:A8:EC:45:D7:9B:21:38:23:9F:16:25:41:80:C9:BF:FE:D5:33:B4:49:6A:26:A4:E5:B9"]
+      }
+    }]
