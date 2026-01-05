@@ -10,7 +10,7 @@ It also features a curated collection of supplications and zyarat, allowing you 
 ### V2.0.0
 *previous version [1.9.1]*
 
-Preview: [https://ali-mahdi-eng.github.io/Hadith/](https://ali-mahdi-eng.github.io/Hadith/) 
+Preview: https://hadith-ahlulbayt.netlify.app/
 
 ---
 
