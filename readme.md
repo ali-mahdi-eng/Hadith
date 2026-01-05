@@ -31,12 +31,12 @@ Preview: [https://ali-mahdi-eng.github.io/Hadith/](https://ali-mahdi-eng.github.
 <br>
 <br>
 
-## 📝 In Plan:
+## 📝 Roadmap:
 - [ ] Desktop Responsiveness (Re-Design UI to support desktop).
 - [ ] Re-Design (add to favourites) system.
 - [ ] Add option to (hide share button) in settings.
 - [ ] Add more content.
-- [ ] Advanced Settings (Customize font: size, color, family, gaps, line hight).
+- [ ] Advanced Settings (Customize font: size, color, family, gaps, line height).
 - [ ] Display (ayat, salauat, tsleem, name of "allah") in special colors `Use special characters for text inside json file to do that`.
 - [ ] ~~Link of page (url) can be shared to anyone to share the same hadith (content), but it must be don't saved in storage (don't save if user come from external link).~~
 - [ ] ~~check if first visit show tutorial.~~
