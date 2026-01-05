@@ -18,9 +18,9 @@ Preview: [https://ali-mahdi-eng.github.io/Hadith/](https://ali-mahdi-eng.github.
 <br>
 
 ## 🔮 Features:
-1. [coming soon] Advanced Settings (Customize font: size, color, family, gaps, line hight).
+1. [coming soon] Advanced Settings (Customize font: size, color, family, gaps, line height).
 2. Light/Dark Mode & Several themes.
-3. Shear with social media.
+3. Share with social media.
 4. Copy text of hadith, duaa, ...etc.
 5. Save favourites hadith.
 6. Remember the last hadith have been read and continue reading from there.
@@ -31,8 +31,8 @@ Preview: [https://ali-mahdi-eng.github.io/Hadith/](https://ali-mahdi-eng.github.
 <br>
 <br>
 
-## 📝 In Plain:
-- [ ] Desktop Responsibility (Re-Design UI to support desktop).
+## 📝 In Plan:
+- [ ] Desktop Responsiveness (Re-Design UI to support desktop).
 - [ ] Re-Design (add to favourites) system.
 - [ ] Add option to (hide share button) in settings.
 - [ ] Add more content.
