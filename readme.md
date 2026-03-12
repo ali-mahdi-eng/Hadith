@@ -7,10 +7,10 @@ It also features a curated collection of supplications and zyarat, allowing you 
 
 ---
 
-### V2.0.0
-*previous version [1.9.1]*
+### V2.0.1
+*previous version [2.0.0]*
 
-Preview: https://hadith-ahlulbayt.netlify.app/
+Preview: [https://hadith-ahlulbayt.netlify.app/](https://hadith-ahlulbayt.netlify.app/) 
 
 ---
 
@@ -32,6 +32,7 @@ Preview: https://hadith-ahlulbayt.netlify.app/
 <br>
 
 ## 📝 Roadmap:
+- [ ] issue: scrolling in main page is not work smoothly, fix it.
 - [ ] Desktop Responsiveness (Re-Design UI to support desktop).
 - [ ] Re-Design (add to favourites) system.
 - [ ] Add option to (hide share button) in settings.
@@ -44,4 +45,50 @@ Preview: https://hadith-ahlulbayt.netlify.app/
 
 
 
+<br>
+<br>
+
+## ✅ Done [0.x.0]:
+#### [2.0.0]
+- [x] Add (update now) button in settings to update service worker manually.
+- [x] Add "About App" Section (in "Settings").
+- [x] Add more sections in main page (duaas, zyarat, munajat, khutab, ahl-al-bayt).
+- [x] Make report or give feedback using external like can be opened with email (send feedback to my personal Gmail)
+- [x] Shear with social media.
+#### [1.9.1]
+- [x] Improve UI/UX,
+- [x] Light/Dark Mode & several themes.
+#### [older]
+- [x] Add Save Favourites Hadith Feature (the same algorithm of bookmark feature).
+- [x] fix issues of getting index saved of last hadith in localStorage
+- [x] In "ahadith-mutafariqa" page, save lastest hadith has been read.
+- [x] Add content to (ahadith-mutafariqa) page.
+- [x] Update version in all pages from js file.
+
+<br>
+<br>
+
+## 🐞 Bugs Fixed [0.0.x]:
+#### [2.0.1]
+- [x] Fix offline content problem (hash make service worker thing each duaa is a different page some user need to open each duua individually to make all them works offline instead of opening only one of them)
+#### [2.0.0]
+- [x] Enhance format of text/source when copying text using copy button.
+- [x] Style duaas/zyarat content, to be more readable.
+- [x] Re-Design local database.
+#### [1.9.1]
+- [x] Fix not updated GUI problem, when add or remove Hadith to/from favourite GUI not updated directly (icon not directly reacting);
+#### [older]
+- [x] enhance `update Now` button style.
+- [x] small UI/UX improvement (display page title in header, enhance header item position).
+- [x] change icons color (darkblue => teal).
+- [x] Upload Project on GitHub on: [Live Page](https://ali-mahdi-eng.github.io/Hadith/) , [Project Files](https://github.com/ali-mahdi-eng/Hadith)
+- [x] Upload Website to host ([netlify.com](https://www.netlify.com/))
+- [x] Change Some Directories (add "style" & "script" to assets directory).
+- [x] Fix And Improve Storage (improve structure or design of saved data in localStorage, like previous hadith index..etc).
+- [x] Add light (white) mode (use can't change themes yet, in next versions he will can).
+- [x] Improve Accessibility (Add "area-lable" attribute for buttons).
+- [x] Fix Loading problem, (ahadith-mutafariqa.html) page does not loading.
+- [x] fix problem in loading page, some times pages doesn't work (problem reduced but not solved).
+- [x] Use async/await instead of using .then() to handle fetch function.
+- [x] user can see (hyper link) when long press on them [use javascript to solve].
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hadith-cache-v2.0.0';
+const CACHE_NAME = 'hadith-ahlulbayt-cache';
 
 const ASSETS_TO_CACHE = [
     // ROOT
@@ -78,53 +78,61 @@ const ASSETS_TO_CACHE = [
     './data/api/shia/Imam_AL-Mahdi(as).json'
 ];
 
-// Install service worker and cache all assets
+// ===== Helper: normalize URL by stripping query string for HTML pages =====
+function getCacheKey(request) {
+    const url = new URL(request.url);
+    // Strip query params for navigations (HTML pages) only
+    if (request.mode === 'navigate' || url.pathname.endsWith('.html') || url.pathname.endsWith('/')) {
+        url.search = '';
+    }
+    return url.toString();
+}
+
+// Install: cache all assets
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE))
-  );
-  self.skipWaiting(); // Activate service worker immediately
-});
-
-// Activate new version and delete old caches
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) =>
-      Promise.all(
-        cacheNames.map((name) => {
-          if (name !== CACHE_NAME) return caches.delete(name);
-        })
-      )
-    )
-  );
-  self.clients.claim();
-});
-
-// Fetch strategy: stale-while-revalidate
-self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') return;
-
-  event.respondWith(
-    caches.open(CACHE_NAME).then((cache) =>
-      cache.match(event.request).then((cachedResponse) => {
-        const fetchPromise = fetch(event.request)
-          .then((networkResponse) => {
-            if (networkResponse.status === 200) {
-              cache.put(event.request, networkResponse.clone());
-            }
-            return networkResponse;
-          })
-          .catch(() => cachedResponse || caches.match('./offline.html'));
-
-        return cachedResponse || fetchPromise;
-      })
-    )
-  );
-});
-
-// Listen for "skipWaiting" message to activate the new version immediately
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE))
+    );
     self.skipWaiting();
-  }
+});
+
+// Activate: delete old caches
+self.addEventListener('activate', (event) => {
+    event.waitUntil(
+        caches.keys().then((cacheNames) =>
+            Promise.all(
+                cacheNames.map((name) => {
+                    if (name !== CACHE_NAME) return caches.delete(name);
+                })
+            )
+        )
+    );
+    self.clients.claim();
+});
+
+// Fetch: stale-while-revalidate with normalized cache key
+self.addEventListener('fetch', (event) => {
+    if (event.request.method !== 'GET') return;
+
+    const cacheKey = getCacheKey(event.request);
+
+    event.respondWith(
+        caches.open(CACHE_NAME).then((cache) =>
+            // Match using normalized key (ignores query string for HTML)
+            cache.match(cacheKey).then((cachedResponse) => {
+                const fetchPromise = fetch(event.request)
+                    .then((networkResponse) => {
+                        if (networkResponse.status === 200) {
+                            // Store with normalized key
+                            cache.put(cacheKey, networkResponse.clone());
+                        }
+                        return networkResponse;
+                    })
+                    .catch(() => cachedResponse || caches.match('./offline.html'));
+
+                // Return cached immediately, update in background
+                return cachedResponse || fetchPromise;
+            })
+        )
+    );
 });
