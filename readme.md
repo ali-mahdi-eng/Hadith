@@ -39,9 +39,6 @@ Preview: [https://hadith-ahlulbayt.netlify.app/](https://hadith-ahlulbayt.netlif
 - [ ] Add more content.
 - [ ] Advanced Settings (Customize font: size, color, family, gaps, line height).
 - [ ] Display (ayat, salauat, tsleem, name of "allah") in special colors `Use special characters for text inside json file to do that`.
-- [ ] ~~Link of page (url) can be shared to anyone to share the same hadith (content), but it must be don't saved in storage (don't save if user come from external link).~~
-- [ ] ~~check if first visit show tutorial.~~
-- [ ] ~~Remake tutorial animation (with animation is more better).~~
 
 
 - [x] Re-Design local database.
