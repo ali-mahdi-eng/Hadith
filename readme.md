@@ -44,36 +44,6 @@ Preview: [https://hadith-ahlulbayt.netlify.app/](https://hadith-ahlulbayt.netlif
 - [ ] ~~Remake tutorial animation (with animation is more better).~~
 
 
-
-<br>
-<br>
-
-## ✅ Done [0.x.0]:
-#### [2.0.0]
-- [x] Add (update now) button in settings to update service worker manually.
-- [x] Add "About App" Section (in "Settings").
-- [x] Add more sections in main page (duaas, zyarat, munajat, khutab, ahl-al-bayt).
-- [x] Make report or give feedback using external like can be opened with email (send feedback to my personal Gmail)
-- [x] Shear with social media.
-#### [1.9.1]
-- [x] Improve UI/UX,
-- [x] Light/Dark Mode & several themes.
-#### [older]
-- [x] Add Save Favourites Hadith Feature (the same algorithm of bookmark feature).
-- [x] fix issues of getting index saved of last hadith in localStorage
-- [x] In "ahadith-mutafariqa" page, save lastest hadith has been read.
-- [x] Add content to (ahadith-mutafariqa) page.
-- [x] Update version in all pages from js file.
-
-<br>
-<br>
-
-## 🐞 Bugs Fixed [0.0.x]:
-#### [2.0.1]
-- [x] Fix offline content problem (hash make service worker thing each duaa is a different page some user need to open each duua individually to make all them works offline instead of opening only one of them)
-#### [2.0.0]
-- [x] Enhance format of text/source when copying text using copy button.
-- [x] Style duaas/zyarat content, to be more readable.
 - [x] Re-Design local database.
 #### [1.9.1]
 - [x] Fix not updated GUI problem, when add or remove Hadith to/from favourite GUI not updated directly (icon not directly reacting);
