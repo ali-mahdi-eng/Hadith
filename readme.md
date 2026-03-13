@@ -1,7 +1,7 @@
-# Hadith
+# Hadith Alhlulbayt
 
 
-Hadith App is a Progressive Web App (PWA) designed to bring authentic narrations from Prophet Muhammad (peace be upon him and his family) and his Ahl al-Bayt (peace be upon them) to your fingertips.
+Hadith Alhlulbayt App is a Progressive Web App (PWA) designed to bring authentic narrations from Prophet Muhammad (peace be upon him and his family) and his Ahl al-Bayt (peace be upon them) to your fingertips.
 
 It also features a curated collection of supplications and zyarat, allowing you to access them anytime, anywhere. The app is free, lightweight, and easy to use, making spiritual guidance more accessible than ever.
 
@@ -48,8 +48,8 @@ Preview: [https://hadith-ahlulbayt.netlify.app/](https://hadith-ahlulbayt.netlif
 - [x] enhance `update Now` button style.
 - [x] small UI/UX improvement (display page title in header, enhance header item position).
 - [x] change icons color (darkblue => teal).
-- [x] Upload Project on GitHub on: [Live Page](https://ali-mahdi-eng.github.io/Hadith/) , [Project Files](https://github.com/ali-mahdi-eng/Hadith)
-- [x] Upload Website to host ([netlify.com](https://www.netlify.com/))
+- [x] Upload Project on GitHub on: [Live Page](https://ali-mahdi-eng.github.io/Hadith-Alhlulbayt/) , [Project Files](https://github.com/ali-mahdi-eng/Hadith-Alhlulbayt)
+- [x] Upload Website to host ([netlify.com](https://hadith-ahlulbayt.netlify.app/))
 - [x] Change Some Directories (add "style" & "script" to assets directory).
 - [x] Fix And Improve Storage (improve structure or design of saved data in localStorage, like previous hadith index..etc).
 - [x] Add light (white) mode (use can't change themes yet, in next versions he will can).
