@@ -25,7 +25,7 @@ Preview: [https://hadith-ahlulbayt.netlify.app/](https://hadith-ahlulbayt.netlif
 5. Save favourites hadith.
 6. Remember the last hadith have been read and continue reading from there.
 7. Support PWA, you can use app from mobile/desktop from home screen directly.
-8. support PWA, app can work offline (this work only if you enter to specific section and read any hadith from there, only that section will be online, you can enter all sections to make all work offline).
+8. Support PWA, the app works fully offline once loaded.
 
 <br>
 <br>
